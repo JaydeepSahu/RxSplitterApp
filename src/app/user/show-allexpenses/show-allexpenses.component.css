@@ -1,0 +1,378 @@
+#example1 {
+    /* -webkit-box-shadow: 42px -16px 41px 0px rgba(77,176,107,1);
+    -moz-box-shadow: 42px -16px 41px 0px rgba(77,176,107,1); */
+    /* box-shadow: 42px -16px 41px 0px rgba(77,176,107,1); */
+  }
+  @import url("../../../assets/vendor/fontawesome-free/css/all.min.css");
+  @import url("../../../assets/css/sb-admin-2.min.css");
+  
+.btn1{
+    margin-left: 225px;
+    padding: 10px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+}
+
+#add_bill .main-window .body .main_fields, #add_bill .subview .body .main_fields, #settle_up_form .main-window .body .main_fields, #settle_up_form .subview .body .main_fields {
+  position: relative;
+  width: 265px;
+  margin: 5px auto;
+  text-align: right;
+}
+
+.example-container {
+  width: 100%;
+  min-width: 50%;
+  max-width: 100%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.example-list {
+  min-width: 130px;
+  border: solid 1px #ccc;
+  min-height: 27px;
+  background: white;
+  /* border-radius: 4px; */
+  overflow: hidden;
+  display: block;
+}
+
+.example-box {
+  margin: 3px;
+  padding: 2px 5px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: #e1f5fe;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-accordion {
+  display: block;
+  max-width: 500px;
+}
+
+.example-accordion-item {
+  display: block;
+  border: solid 1px #ccc;
+}
+
+.example-accordion-item + .example-accordion-item {
+  border-top: none;
+}
+
+.example-accordion-item-header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.example-accordion-item-description {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.example-accordion-item-header,
+.example-accordion-item-body {
+  padding: 16px;
+}
+
+.example-accordion-item-header:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.example-accordion-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.example-accordion-item:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.hiddenRow {
+
+  padding: 0 !important;
+
+}
+
+body {
+  background: #ebedf2;
+  font-family: "Poppins", sans-serif;
+}
+
+.empty-state {
+  width: 750px;
+  margin-left: 48px;
+  margin-top: -450px;
+  background: #ffffff;
+  box-shadow: 1px 2px 10px #e1e3ec;
+  border-radius: 4px;
+}
+.empty-state__content {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-state__content .empty-state__icon {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 200px;
+  justify-content: center;
+  background-color: #f7fafc;
+  box-shadow: 0px 2px 1px #e1e3ec;
+}
+.empty-state__content .empty-state__icon img {
+  width: 170px;
+}
+.empty-state__content .empty-state__message {
+  color: #38a169;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 0.85rem;
+}
+.empty-state__content .empty-state__help {
+  color: #a2a5b9;
+  font-size: 0.875rem;
+}
+
+.credit {
+  color: #A2A5B9;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.credit a {
+  color: #444;
+}
+
+
+
+.users {
+  display: none;
+  background: #f8f8f8;
+  padding: 15px;
+  box-shadow: inset 0 5px 7px -5px rgba(0, 0, 0, 0.25), inset 0 -3px 7px -5px rgba(0, 0, 0, 0.25)
+}
+
+.users table {
+  table-layout: fixed;
+  width: 100%;
+  vertical-align: top
+}
+
+.users td.left {
+  width: 265px;
+  vertical-align: top;
+  padding-right: 15px;
+  padding-bottom: 3px
+}
+
+.users td.right {
+  width: 245px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  vertical-align: top
+}
+
+.users img.category {
+  float: left;
+  border: 1px solid #ddd;
+  width: 84px;
+  height: 84px;
+  margin-right: 10px
+}
+
+.users h3 {
+  font-size: 16px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.users h4 {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  color: #999
+}
+
+.users .cost {
+  margin-top: -1px;
+  font-size: 20px;
+  font-weight: bold
+}
+
+.users .creation_info {
+  margin-top: 3px;
+  padding-bottom: 13px;
+  padding-left: 96px;
+  font-size: 12px;
+  color: #999
+}
+
+.users div.receipt {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px
+}
+
+.users div.receipt h4 {
+  margin-top: -1px
+}
+
+.users div.receipt img.receipt {
+  width: 68px;
+  height: 68px
+}
+
+.users table.shares {
+  margin: 5px 0 0
+}
+
+.users tr.user td {
+  padding: 10px 0 0
+}
+
+.users tr.user td.avatar {
+  height: 38px;
+  padding-right: 9px;
+  width: 38px
+}
+
+.users tr.user td.avatar img {
+  height: 38px;
+  width: 38px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+  margin-top: -2px
+}
+
+.users tr.user strong {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.users> div.comment {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 6px 8px;
+  background: #fff;
+  margin-bottom: 8px;
+  word-wrap: break-word
+}
+
+.users> div.comment.notes {
+  background: #ffffe9
+}
+
+.btn-mini {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 14px 4px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 2px 20px 2px 45px;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 89%;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+/* .dropdown-content a:hover {background-color: #f1f1f1} */
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

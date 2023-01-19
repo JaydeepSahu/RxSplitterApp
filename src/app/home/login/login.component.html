@@ -1,0 +1,122 @@
+
+	<a  class="logo" >
+		<img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4dDWdtHqNMiYTmGB2dJrazlJMMG2zs_FDw&amp;usqp=CAU">
+		<!-- <img src="https://assets.codepen.io/1462889/fcy.png" alt=""> -->
+	</a>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                       
+			          	<input class="checkbox " type="checkbox" id="reg-log" name="reg-log"/>
+                        
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+							<div class="card-front">
+								<form  [formGroup]="loginForm" (ngSubmit)="loginSubmitted()">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Log In</h4>
+											<div class="form-group">
+											<div *ngIf="displayEmail!=null" >
+												<!-- <h3  class="form-style" value={{displayEmail}}>{{displayEmail}}</h3> -->
+												<input readonly  class="form-style"   value={{displayEmail}}  >
+										    </div>
+											<div *ngIf="displayEmail==null">
+												<input type="email" class="form-style" placeholder="Your Email" id="email" autocomplete="off" formControlName="userName"/>
+											</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="userName.errors?.['required'] 
+												&&  userName.dirty">Email is required!</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="userName.errors?.['userName']
+												&&  userName.dirty">Email is not valid!</div>
+												<i class="input-icon uil uil-at fa fa-id-card"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<input type="password" class="form-style" placeholder="Your Password" id="password" formControlName="password" autocomplete="off"/>
+
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="password.errors?.['required'] 
+												&& password.dirty">Password is required!</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] 
+												&& password.dirty">Password should be at least 8 digit at the max 15 characters long!</div>
+												<i class="input-icon uil uil-lock-alt fa fa-lock"></i>
+											</div>
+											
+											<div aria-readonly="true" *ngIf="displayEmail!=null">
+												<button type="submit"  class="btn mt-4">Login</button>
+											</div>
+											<div *ngIf="displayEmail==null">
+												<button type="submit" [disabled]="loginForm.invalid" class="btn mt-4">Login</button>
+											</div>
+										
+                            				<p class="mb-0 mt-4 text-center"><a class="link" [routerLink]="['/forgetPassword']"> Forgot your password? </a></p>
+				      					</div>
+			      					</div>
+								</form>
+			      			</div>
+					
+							  <!-- <div id="loading-bar-spinner" class="spinner" *ngIf="loader"><div class="spinner-icon"></div></div> -->
+							  <!-- <div *ngIf="loader"  id="cover-spin"></div>	 -->
+							  <div class="card-back">
+									<form [formGroup]="registerForm" (ngSubmit)="registeredSubmit()">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Sign Up</h4>
+											<div class="form-group">
+												<input formControlName="name" type="text" class="form-style"  placeholder="Your Full Name" id="name" autocomplete="off"/>
+
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="name.errors?.['required'] 
+												&& name.dirty">Full name is required!</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="name.errors?.['minlength']
+												&&  name.dirty">Full name is too short!</div>
+												<div class="alert alert-danger"  style="padding: 0em" *ngIf="name.errors?.['pattern']
+												&&  name.dirty">Full name should start with alphabet!</div>
+												<i class="input-icon uil uil-user fa fa-user"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<div  *ngIf="displayEmail!=null">
+													<input readonly type="text"  class="form-style" value={{displayEmail}}>
+												</div>
+												<div *ngIf="displayEmail==null">
+													<input type="email" class="form-style" placeholder="Your Email" id="email" name="email" formControlName="email"/>
+												</div>
+												<!-- <input formControlName="email" type="email"  class="form-style" name="email" placeholder="Your Email" /> -->
+									
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="email.errors?.['required'] 
+												&&  email.dirty">Email Id name is required!</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="email.errors?.['EmailId']
+												&& email.dirty">Email Id is not valid!</div>
+												<i class="input-icon uil uil-at fa fa-id-card"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<input formControlName="password" type="password" class="form-style" placeholder="Your Password" id="Password" autocomplete="off"/>
+											
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="Password.errors?.['required'] 
+												&&  Password.dirty">Password is required!</div>
+												<div class="alert alert-danger" style="padding: 0em" *ngIf="Password.errors?.['minlength'] || Password.errors?.['maxlength'] 
+												&&  Password.dirty">Password should be at least 8 digit at the max 15 characters long!</div>
+												<i class="input-icon uil uil-lock-alt fa fa-lock"></i>
+											</div>
+											<div *ngIf="displayEmail!=null">
+												<button type="submit"  class="btn mt-4">Submit</button>
+											</div>
+											<div *ngIf="displayEmail==null">
+												<button type="submit" [disabled]="registerForm.invalid" class="btn mt-4">Submit</button>
+											</div>
+				      					</div>
+			      					</div>
+									</form>
+								
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>

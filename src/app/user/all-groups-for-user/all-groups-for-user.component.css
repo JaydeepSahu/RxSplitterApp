@@ -1,0 +1,252 @@
+.li:hover{
+	background: #000;
+}
+
+
+.btn-mini {
+	padding: 2px 6px;
+	font-size: 11px;
+	line-height: 14px;
+  }
+  
+  
+  
+  
+  
+  /* Dropdown Button */
+  .dropbtn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+	background-color: #3e8e41;
+  }
+  
+  /* The search field */
+  #myInput {
+	box-sizing: border-box;
+	background-image: url('https://www.w3schools.com/howto/searchicon.png');
+	background-position: 14px 4px;
+	  background-repeat: no-repeat;
+	  font-size: 16px;
+	  padding: 2px 20px 2px 45px;
+	border: none;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f6f6f6;
+	min-width: 89%;
+	border: 1px solid #ddd;
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  /* .dropdown-content a:hover {background-color: #f1f1f1} */
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+
+  /* ----------------------added card style--------------------- */
+
+
+
+  @media (min-width: 768px){
+  /* .col-md-4
+   {
+	  -ms-flex: 0 0 33.333333%;
+	  flex: 0 0 33.333333%;
+	  max-width:  24.333333%;
+	  max-width: 33.333333%;
+	  font-size: 12px;
+    font-weight: bold;
+  } */
+
+
+  /* .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	  position: relative;
+	  width: 100%;
+	  padding-right: 7.5px;
+	  padding-left: 7.5px;
+	  padding-top: 8.5px;
+  }
+  *, ::after, ::before {
+	  box-sizing: border-box;
+  } */
+  /* div {
+	  display: block;
+  } */
+  .card-widget {
+	  border: 0;
+	  position: relative;
+  }
+  .card {
+	  box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+	  margin-bottom: 1rem;
+  }
+  .card {
+	  position: relative;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
+	  min-width: 0;
+	  word-wrap: break-word;
+	  background-color: #fff;
+	  background-clip: border-box;
+	  border: 0 solid rgba(0,0,0,.125);
+	  border-radius: 0.25rem;
+  }
+  .widget-user .widget-user-header {
+	  border-top-left-radius: 0.25rem;
+	  border-top-right-radius: 0.25rem;
+	  height: 135px;
+	  padding: 1rem;
+	  text-align: center;
+  }
+  .bg-info, .bg-info>a {
+	  color: #fff!important;
+  }
+  .bg-info {
+	  background-color: #26b3c9!important
+  }
+  .widget-user .widget-user-username {
+	  font-size: 18px;
+	  font-weight: 300;
+	  margin-bottom: 0;
+	  margin-top: 0;
+	  text-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	  margin-bottom: 0.5rem;
+	  font-family: inherit;
+	  font-weight: 500;
+	  line-height: 1.2;
+	  color: inherit;
+  }
+  .widget-user .widget-user-desc {
+	  margin-top: 0;
+  }
+  .h5, h5 {
+	  font-size: 1.25rem;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	  margin-bottom: 0.5rem;
+	  font-family: inherit;
+	  font-weight: 500;
+	  line-height: 1.2;
+	  color: inherit;
+  }
+  .widget-user .widget-user-image {
+	  left: 50%;
+	  margin-left: -45px;
+	  position: absolute;
+	  top: 80px;
+  }
+  .widget-user .widget-user-image>img {
+	  border: 3px solid #fff;
+	  height: auto;
+	  width: 80px;
+  }
+  .elevation-2 {
+	  box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)!important;
+  }
+  .img-circle {
+	  border-radius: 50%;
+  }
+  img {
+	  vertical-align: middle;
+	  border-style: none;
+  }
+  .card-footer {
+	  padding: 2.75rem 1.25rem;
+	  background-color: rgba(0,0,0,.03);
+	  border-top: 0 solid rgba(0,0,0,.125);
+	  padding-bottom: 0.74rem ;
+  }
+  .description-block {
+	  display: block;
+	  margin: 10px 0;
+	  text-align: center;
+  }
+  .description-block>.description-header {
+	  font-size: 12px;
+	  font-weight: 600;
+	  margin: 0;
+	  padding: 0;
+  }
+  .description-block>.description-text {
+	  text-transform: uppercase;
+	  font-size: 12px;
+  }
+  
+
+  .description
+  {
+	display: block;
+	margin: 10px 0;
+	text-align: center;
+  }
+
+  .description>.description-header {
+	font-size: 11px;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+}
+.description>.description-text {
+	text-transform: capitalize;
+	font-size: 10px;
+}
+.dot-online {
+	height: 20px;
+	width: 20px;
+	background-color: rgb(70, 231, 67);
+	border-radius: 50%;
+	display: inline-block;
+	float: right;
+  }
+  .dot-offline {
+	height: 20px;
+	width: 20px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	float: right
+  }
+
+}
+
+.border-right {
+    border-right: 1px solid #dee2e6!important;
+}

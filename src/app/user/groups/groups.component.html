@@ -1,0 +1,93 @@
+<!-- <div class="content-block"> -->
+  <ng-template #loggedOut>
+  <div class="card">
+    <div class="card-header" style="padding: 12px 0px 8px 20px;">
+      <h4>
+        Start a new group
+      </h4>
+    </div>
+    <div class="card-body">
+      <form>
+        <div style="font-size: 24px; line-height: 140%; margin: 16px 0 5px">
+          <label> My group shall be called</label>
+          <div class="row mt-3">
+
+    <div class="col-sm-2">
+      <select aria-label="Example select with button addon" [(ngModel)]="CurrencyId" name="CurrencyId" class="form-select">
+       <option value="undefined" selected>--Select--</option>
+        <option [value]="curId.id" *ngFor="let curId of Currency">{{curId.code}}</option>
+      </select>
+     </div>
+
+          <div class="col-sm-6">
+              <input class="form-control" type="text" placeholder="Enter Group Name" [(ngModel)]="GroupName" name="GroupName" />
+          </div>
+          <div class="col-sm-4">
+          <button type="submit" class="btn btn-warning" (click)="CreateGroup()" style="float: right; margin-left:5px;">Submit</button>
+          <button class="btn btn-info" style="float: right;" (click)="CancelGroup()">Cancel</button>&nbsp; &nbsp;
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>  
+
+<div class="card" *ngIf="showSecondForm; else loggedOut">
+  <div class="card-header" style="background: #ffe8ba;padding: 0px 0px 0px 30px;">
+    <h2>
+      {{GroupName}}
+    </h2>
+  </div>
+  <div class="card-body">
+      <form  [formGroup]="showForm"   >
+        <h1>Add Group Member </h1>
+        <div formArrayName="lstGroupMember">
+               <input disabled type="text" style="width: 290px;" value={{alreadyMember}}>
+             
+          <div *ngFor="let item of getGroup().controls; let i = index"  [formGroupName]="i">
+            <br/>
+            <div class="row">
+                <div class="col col-md-4">
+                  <input type="text" class="form-control" placeholder="Enter Email" formControlName="Email"/>
+
+                  <div *ngIf="item.controls.Email.invalid && item.controls.Email.touched">
+                  <div style="color: red;" [hidden]="!item.controls.Email.errors.required">
+                    Email is required
+                  </div>
+                  <div class="text-danger" style="font-size: 12px;" [hidden]="!item.controls.Email.errors.email && item.controls.Email.touched">
+                    Email is not in valid format
+                  </div>
+                  </div>
+                  
+                  <!-- <div class="alert alert-danger" style="padding: 0em" *ngIf="Email.errors?.['required'] 
+                  && (Email.touched || Email.dirty)">Email is required!</div>
+                  <div class="alert alert-danger" style="padding: 0em" *ngIf="Email.errors?.['userName']
+                  && (Email.touched || Email.dirty)">Email is not valid!</div> -->
+                </div>
+                  <div class="col col-md-6">
+                    <button (click)="removeQuantity(i)" class="btn btn-danger"><span class="fa fa-close"></span></button>  
+                  </div>
+            </div>
+            </div>
+            <div class="col col-md-6">
+              <br/>
+            <button class="btn btn-primary" (click)="addEContact()">Add more</button> &nbsp;
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>&nbsp;
+          <button [disabled]="showForm.invalid" (click)="submitGroupMember()" type="button" class="btn btn-warning"  type="submit">Submit</button>
+      
+        </div>
+    </form>
+  </div>
+</div>
+   
+<notifier-container></notifier-container>
+ 
+<!-- </div> -->
+
+
+
+

@@ -1,0 +1,69 @@
+<div class="modal fade" id="settle_up_form" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 27%;" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="padding: 10px 9px 10px 12px; background: #03a9f454">
+        <h6 class="modal-title" id="exampleModalLongTitle" style="position: relative; top: 0px">Settle up for Group - <strong class="badge bg-success text-white" style="color:cadetblue">{{grpName}}</strong></h6>
+        <button type="button" id="close" class="btn-close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="body" style="position: relative;">
+            <div class="main_fields">
+              <div class="images">
+                <img class="avatar payer" src="https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-blue22-100px.png">
+                <img class="arrow" src="https://assets.splitwise.com/assets/fat_rabbit/settle-up-arrow-83553d33b6848bbdfa3499d7e217748aab1f75ff2073ec5ac67cba5246e12459.png">
+                <img class="avatar payee" src="https://s3.amazonaws.com/splitwise/uploads/user/default_avatars/avatar-orange25-100px.png">
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="human_summary">
+                    <!-- <a class="payer">{{paymentDetails?.paidByName}} </a> -->
+                    <a class="payer">You </a>
+                    <span class="transaction_human_summary"> have to pay </span>
+          
+                    <!-- <a class="payee">{{paymentDetails.paidToName}}</a> -->
+                    <select aria-label="Example select with button addon"  [(ngModel)]="selectedId"  [(ngModel)]="selectedName" class="form-select" style="padding: 0px;height: 35px;margin-left:-7px;margin-right: 20px;width: 170px;float:right;margin-top:0px;">
+                      <option  [(ngValue)]="ctgr.id" *ngFor="let ctgr of participants;">      {{ctgr.name}}             
+                        
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="cost_container">
+                    <span class="currency_code"><i [ngClass]="CurrencyIcon"></i>&nbsp; 
+                      <input type="text" class="cost" [(ngModel)]="payableAmount" placeholder="0.00" size="5" >
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- <a class="date slim-button">January 4, 2023</a>
+            <a class="notes slim-button">Add image/notes</a> -->
+              <!-- <a class="group slim-button">
+                Manali Trans
+              </a> -->
+          </div>
+      </div>
+      <!-- <div class="modal-body" *ngIf="!isPayable">
+          <div class="body" style="position: relative;">
+            <div class="main_fields">
+            <h3>{{data}}</h3>
+            </div> -->
+            <!-- <a class="date slim-button">January 4, 2023</a>
+            <a class="notes slim-button">Add image/notes</a> -->
+              <!-- <a class="group slim-button">
+                Manali Trans
+              </a> -->
+          <!-- </div>
+      </div> -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="SaveTransaction()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
